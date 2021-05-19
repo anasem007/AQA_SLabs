@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailApi", "TestRailApi\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObject", "PageObject\PageObject.csproj", "{F89F75A6-1CCC-423C-9309-0C6327F97A43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitsAlertsWindowsHandling", "WaitsAlertsWindowsHandling\WaitsAlertsWindowsHandling.csproj", "{D15DF6C7-1C97-4B37-97B4-62AC45DE5D54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15DF6C7-1C97-4B37-97B4-62AC45DE5D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15DF6C7-1C97-4B37-97B4-62AC45DE5D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15DF6C7-1C97-4B37-97B4-62AC45DE5D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15DF6C7-1C97-4B37-97B4-62AC45DE5D54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
