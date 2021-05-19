@@ -6,7 +6,7 @@ namespace PageObject.Steps
 {
     public class DashboardPageSteps : BaseStep
     {
-        private DashboardPage _dashboardPage;
+        private readonly DashboardPage _dashboardPage;
         
         public DashboardPageSteps(IWebDriver driver) : base(driver)
         {
