@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saucedemo", "Saucedemo\Sauc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailApi", "TestRailApi\TestRailApi.csproj", "{63506D03-583A-4EF3-B868-B8B75A9FE036}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObject", "PageObject\PageObject.csproj", "{F89F75A6-1CCC-423C-9309-0C6327F97A43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{63506D03-583A-4EF3-B868-B8B75A9FE036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63506D03-583A-4EF3-B868-B8B75A9FE036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63506D03-583A-4EF3-B868-B8B75A9FE036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89F75A6-1CCC-423C-9309-0C6327F97A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
