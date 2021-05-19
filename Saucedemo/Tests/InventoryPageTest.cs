@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using NUnit.Framework;
@@ -33,20 +34,15 @@ namespace Saucedemo.Tests
         [Test]
         public void InventoryPage_AddItemToCart()
         {
-            var listItem = _inventoryPageSteps.AddItemToCart("Sauce Labs Onesie");
+            var itemName = _inventoryPageSteps.AddItemToCart("Sauce Labs Onesie").Name.Text();
             
             using (new AssertionScope())
             {
                 _inventoryPageSteps.GetItemButtonName("Sauce Labs Onesie").Should().Be("REMOVE");
                 _inventoryPageSteps.GetCartBadgeText().Should().Be(1.ToString());
-                
-                 _cartPageSteps = new CartPageSteps(Driver);
+                _cartPageSteps = new CartPageSteps(Driver);
                  _cartPageSteps.GetItemsCount().Should().Be(1);
-                 _cartPageSteps.GetItems().Should().SatisfyRespectively(
-                     item =>
-                     {
-                         item.Name.Text().Should().Be(listItem.Name.Text());
-                     });
+                 _cartPageSteps.GetItems().Select(i => i.Name.Text()).Should().Equal(itemName);
             }
         }
 
@@ -63,10 +59,9 @@ namespace Saucedemo.Tests
                 _inventoryPageSteps.GetItemButtonName("Sauce Labs Onesie").Should().Be("REMOVE");
                 _inventoryPageSteps.GetItemButtonName("Sauce Labs Backpack").Should().Be("REMOVE");
                 _inventoryPageSteps.GetCartBadgeText().Should().Be(2.ToString());
-
                 _cartPageSteps = new CartPageSteps(Driver);
                 _cartPageSteps.GetItemsCount().Should().Be(2);
-      //          _cartPageSteps.GetItems().Should().AllBeEquivalentTo(expectedItemsInCart);
+
             }
         }
     }
