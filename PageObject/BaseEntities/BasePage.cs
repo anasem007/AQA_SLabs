@@ -1,5 +1,4 @@
 using System;
-using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -27,17 +26,7 @@ namespace PageObject.BaseEntities
 
         protected void WaitForOpen()
         {
-            var secondsCount = 0;
-            var isPageOpenedIndicator = IsPageOpened();
-
-            while (isPageOpenedIndicator && secondsCount < WaitForPageLoadingTime)
-            {
-                Thread.Sleep(10);
-                secondsCount++;
-                isPageOpenedIndicator = IsPageOpened();
-            }
-
-            if (!isPageOpenedIndicator)
+            if (!IsPageOpened())
             {
                 throw new AssertionException("Page was not opened.");
             }
