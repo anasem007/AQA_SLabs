@@ -7,7 +7,7 @@ namespace Saucedemo.Pages
 {
     public class CheckoutYourInfoPage : BasePage
     {
-        private static string END_POINT = "checkout-step-one.html";
+        private const string EndPoint = "checkout-step-one.html";
 
         private static readonly By TitleBy = By.ClassName("title");
         private static readonly By FirstNameInputBy = By.Id("first-name");
@@ -23,7 +23,7 @@ namespace Saucedemo.Pages
 
         protected override void OpenPage()
         {
-            Driver.Navigate().GoToUrl(BaseTest.BaseUrl + END_POINT);
+            Driver.Navigate().GoToUrl(BaseTest.BaseUrl + EndPoint);
         }
 
         public override bool IsPageOpened()
